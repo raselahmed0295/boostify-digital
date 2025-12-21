@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes pulse-soft {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2.2s ease-out infinite;
+}
+
+.color-animated {
+  animation: color-change 1s infinite;
+  color: #0b1b3b;
+  margin-left: 10px;
+}
+
+@keyframes color-change {
+  0% {
+    color: #0b1b3b;
+  }
+
+  50% {
+    color: #e3154f;
+  }
+
+  to {
+    color: #6851df;
+  }
+}
+
+/* ====== rotating gradient border (0deg -> 360deg) ====== */
+
+@keyframes rotate-border {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes border-smooth {
+  /* LEFT SIDE (top → bottom) */
+  0% {
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0%;
+  }
+  25% {
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+  }
+
+  /* BOTTOM SIDE (left → right) */
+  25.01% {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+  }
+  50% {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+  }
+
+  /* RIGHT SIDE (bottom → top) */
+  50.01% {
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 0%;
+  }
+  75% {
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+  }
+
+  /* TOP SIDE (right → left) */
+  75.01% {
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 2px;
+  }
+  100% {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+  }
+}
+
+.border-smooth {
+  position: absolute;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.6);
+  background: linear-gradient(180deg, #6366f1, #8b5cf6, #6366f1);
+  animation: border-smooth 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* ===============================
+   PREMIUM INFINITE BORDER BUTTON
+================================ */
+
+.premium-btn {
+  position: relative;
+  padding: 2px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #6851df, #9b8cff, #6851df);
+  background-size: 300% 300%;
+  animation: gradientMove 4s linear infinite;
+  text-decoration: none;
+}
+
+.premium-btn::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #6851df, #9b8cff, #6851df);
+  background-size: 300% 300%;
+  filter: blur(18px);
+  opacity: 0.6;
+  animation: gradientMove 4s linear infinite;
+  z-index: 0;
+}
+
+.premium-btn-inner {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  /* 🔽 Smaller size */
+  padding: 10px 16px;
+  border-radius: 5px;
+
+  /* 🔥 Linear gradient background */
+  background: linear-gradient(135deg, #6d28ff, #7c3aed);
+
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 15px;
+
+  box-shadow: 0 6px 16px rgba(109, 40, 255, 0.35);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.premium-btn:hover .premium-btn-inner {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(109, 40, 255, 0.45);
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+/* ===============================
+   ZOOM IN & OUT CTA ANIMATION
+================================ */
+
+@keyframes zoomPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.zoom-pulse {
+  animation: zoomPulse 2.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* ===== Premium Modal Scrollbar ===== */
+.modal-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6366f1, #8b5cf6, #ec4899);
+  border-radius: 10px;
+}
+
+.modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #4f46e5, #7c3aed, #db2777);
+}
+.modal-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #8b5cf6 rgba(255, 255, 255, 0.15);
+}
