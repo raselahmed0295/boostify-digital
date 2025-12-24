@@ -20,7 +20,7 @@ const Home = () => {
             <div className="space-y-8">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
                 We Build
-                <span className="text-[#5B43D8] ml-2 block sm:inline color-animated">
+                <span className="text-[#5B43D8] block sm:inline sm:ml-2 color-animated">
                   Websites & Grow Your Social Reach
                 </span>
               </h2>
