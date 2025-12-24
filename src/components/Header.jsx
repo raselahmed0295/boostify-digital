@@ -105,8 +105,8 @@ const Header = () => {
 
             {/* Call Button */}
             <div className="hidden md:inline-flex">
-              <a href="tel:01304755851" className="premium-btn zoom-pulse">
-                <span className="premium-btn-inner">📞 Call: 01304755851</span>
+              <a href="tel:01867677350" className="premium-btn zoom-pulse">
+                <span className="premium-btn-inner">📞 Call: 01867-677350</span>
               </a>
             </div>
 

@@ -148,7 +148,7 @@ ${form.message}
 
           <div className="mt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2 text-sm text-gray-600">
-              <Phone size={16} /> 01304755851
+              <Phone size={16} /> +880 1867 677 350
             </div>
 
             {/* <button

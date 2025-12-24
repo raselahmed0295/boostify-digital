@@ -17,6 +17,7 @@ import {
 const SERVICES_DATA = [
   {
     id: 1,
+    slug: "single-page-website",
     icon: PanelsTopLeft,
     title: "Premium Single-Page Website",
     price: "৳9,000 – ৳12,000",
@@ -54,6 +55,7 @@ const SERVICES_DATA = [
   },
   {
     id: 2,
+    slug: "business-website",
     icon: Handshake,
     title: "Small Business Website",
     price: "Starting from ৳15,000",
@@ -95,6 +97,7 @@ const SERVICES_DATA = [
   },
   {
     id: 3,
+    slug: "ecommerce-website",
     icon: ShoppingBag,
     title: "Full E-commerce Website",
     price: "Starting from ৳35,000",
@@ -142,6 +145,7 @@ const SERVICES_DATA = [
   },
   {
     id: 4,
+    slug: "facebook-page",
     icon: Facebook,
     title: "FB Page Pro Setup & Management",
     price: "Starting from ৳5,000",
@@ -184,6 +188,7 @@ const SERVICES_DATA = [
   },
   {
     id: 5,
+    slug: "boosting",
     icon: BarChart3,
     title: "Social Media Boosting Services",
     price: "৳5,000 / month",
@@ -226,6 +231,7 @@ const SERVICES_DATA = [
   },
   {
     id: 6,
+    slug: "youtube",
     icon: Youtube,
     title: "Pro YouTube Channel & Video Editing",
     price: "Starting from ৳6,500",
@@ -371,6 +377,7 @@ export default function ServicesSection() {
           {SERVICES_DATA.map((service) => (
             <motion.div
               key={service.id}
+              id={service.slug}
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },

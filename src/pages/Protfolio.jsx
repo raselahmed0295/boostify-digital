@@ -48,29 +48,30 @@ const Protfolio = () => {
 
   const projects = [
     {
+      title: "Modern Rustic Barn House",
+      category: "Website",
+      icon: Globe,
+      type: "url",
+      preview: "https://raselahmed0295.github.io/Assaginment-03/",
+      description:
+        "A striking barn house design blending rustic warmth with modern elegance—featuring natural wood, metal accents, and expansive windows. Design showcase only (not a responsive build).",
+    },
+    {
       title: "Real Estate Landing Page",
       category: "Website",
       icon: Globe,
       type: "url",
       preview: "https://pushpodharabd.com",
-      description: "High-converting landing page built for lead generation.",
-    },
-    {
-      title: "Local Restaurant Website",
-      category: "Website",
-      icon: Globe,
-      type: "url",
-      preview: "https://pushpodharabd.com",
       description:
-        "Fast-loading responsive website with menu & WhatsApp order button.",
+        "High-converting landing page built for lead generation and full responsive for all devices.",
     },
 
     {
       title: "Personal Service Business Site",
       category: "Website",
       icon: Globe,
-      type: "image",
-      preview: "/images/service-home.jpg",
+      type: "url",
+      preview: "https://raselahmed0295.github.io/Assaginment-06/",
       description: "Clean business website designed to convert local visitors.",
     },
     {

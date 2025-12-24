@@ -25,9 +25,9 @@ const Home = () => {
                 </span>
               </h2>
               <p className="mt-4 text-xl text-gray-600">
-                Fast, professional, and conversion-driven single page websites
-                for local businesses. Plus: Facebook page setup, content, and
-                boosting to drive customers.
+                Fast, professional, and conversion-focused single-page websites
+                for local businesses—plus Facebook Page setup, content, and
+                smart boosting to attract real customers.
               </p>
 
               <motion.div
@@ -136,7 +136,7 @@ const Home = () => {
       </section>
 
       {/* PREMIUM FEATURE HIGHLIGHTS */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
+      <section id="chouse" className="max-w-7xl mx-auto px-6 py-24">
         {/* SECTION HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-1 mb-4 text-sm font-semibold text-indigo-600 bg-indigo-50 rounded-full">

@@ -1,5 +1,6 @@
 import React from "react";
 import logoImg from "../assets/boostify_digitals.png";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -26,15 +27,35 @@ const Footer = () => {
             </p>
 
             <div className="flex gap-4 mt-6">
-              {["facebook-f", "instagram", "linkedin-in"].map((icon) => (
-                <a
-                  key={icon}
-                  href="#"
-                  className="w-9 h-9 flex items-center justify-center rounded-full bg-white/5 hover:bg-indigo-500 hover:text-white transition-all duration-300"
-                >
-                  <i className={`fa-brands fa-${icon}`} />
-                </a>
-              ))}
+              <a
+                href="https://www.facebook.com/boostifydigitalsbd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-btn"
+                aria-label="Boostify Digital Facebook"
+              >
+                <Facebook size={18} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/boostifydigital"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-btn"
+                aria-label="Boostify Digital Instagram"
+              >
+                <Instagram size={18} />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/boostifydigital"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-btn"
+                aria-label="Boostify Digital LinkedIn"
+              >
+                <Linkedin size={18} />
+              </a>
             </div>
           </div>
 
@@ -43,18 +64,35 @@ const Footer = () => {
             <h5 className="text-white font-semibold tracking-wide mb-5">
               Services
             </h5>
+
             <ul className="space-y-3 text-sm">
               {[
-                "Local Business Website",
-                "Landing Page Design",
-                "Facebook Page Setup",
-                "Boosting & Management",
-              ].map((service) => (
-                <li
-                  key={service}
-                  className="hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer"
-                >
-                  {service}
+                {
+                  label: "Premium Single-Page Website",
+                  link: "#single-page-website",
+                },
+                {
+                  label: "Small or Local Business Website",
+                  link: "#business-website",
+                },
+                {
+                  label: "Full E-commerce Website",
+                  link: "#ecommerce-website",
+                },
+                { label: "Facebook Page Setup", link: "#facebook-page" },
+                { label: "Boosting & Management", link: "#boosting" },
+                {
+                  label: "Pro Youtube Channel & Video Editing",
+                  link: "#youtube",
+                },
+              ].map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.link}
+                    className="block hover:text-white hover:translate-x-1 transition-all duration-300"
+                  >
+                    {item.label}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -65,17 +103,23 @@ const Footer = () => {
             <h5 className="text-white font-semibold tracking-wide mb-5">
               Company
             </h5>
+
             <ul className="space-y-3 text-sm">
-              {["About Us", "Projects", "Why Choose Us", "Contact"].map(
-                (item) => (
-                  <li
-                    key={item}
-                    className="hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer"
+              {[
+                { label: "About Us", link: "#about" },
+                { label: "Our Services", link: "#services" },
+                { label: "Why Choose Us", link: "#chouse" },
+                { label: "Contact", link: "#contact" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.link}
+                    className="block hover:text-white hover:translate-x-1 transition-all duration-300"
                   >
-                    {item}
-                  </li>
-                )
-              )}
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -86,7 +130,7 @@ const Footer = () => {
             </h5>
 
             <p className="text-sm mb-3">📍 Dhaka, Bangladesh</p>
-            <p className="text-sm mb-3">📞 +880 1304-755851</p>
+            <p className="text-sm mb-3">📞 +880 1867 677 350</p>
 
             <a
               href="#contact"
